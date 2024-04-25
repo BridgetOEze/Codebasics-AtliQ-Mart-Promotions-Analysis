@@ -103,10 +103,6 @@ Sales director Bruce Haryali wanted this immediately, but the analytics manager 
 
 ![unique promo types](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/b491bd9c-5742-4e87-90fd-ce32a57f391c)
 
-- **Number of Stores in each City** – Bengaluru has the most stores and Vijayawada has the least stores.
-
-![Ad Hoc Request No2 Store count per city sql](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/10a7bf41-4aab-41df-a816-2ab7e34272d5)
-
 - **Scope of Data** - The dataset covers 1,500 promotional events across 50 stores in 10 cities, focusing on 15 different products belonging to 5 categories. 5 types of promotions were utilized during 2 major campaigns: Diwali and Sankranti.
 
 **Data Aggregation:** Still on SQL, I created a new table named **‘events_summarized_data’** with aggregated data from the events_combined_data table. The **‘events_summarized_data’** table includes additional columns calculating the following for each sales event: **incremental sold units, ISU%**(incremental sold unit percentage), **revenue before promo, revenue after promo, incremental revenue generated, and IR%**(incremental revenue generated percentage). 
@@ -126,6 +122,13 @@ The summarized data is appropriately stored in the **retail_events_db** database
 Analysis question: What is the effectiveness of the sales promotions conducted during the Diwali and Sankranti campaigns? 
 
 ### Campaign Performance
+![Ad Hoc Request No3 Campaign Total Revenue](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/d05ea375-76dc-4c4c-901d-d9095bba282c)
+Ad Hoc Request No3 - Total Revenue Generated 
+
+![Total Revenue Generated per Campaign](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/9505b1ef-6b43-4381-868f-1a8a05377850) 
+
+![Total Units Sold per Campaign](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/f972476a-1dac-4ae0-864a-05d17660bfa5)
+
 In terms of **incremental units sold**, the **Sankranti campaign outperformed** the Diwali campaign. The increase in units sold for the Sankranti campaign is more than double that of the Diwali campaign.
 
 Despite the Sankranti campaign selling more units incrementally, the **Diwali campaign** generated a **higher incremental revenue**.
@@ -133,6 +136,10 @@ Despite the Sankranti campaign selling more units incrementally, the **Diwali ca
 The higher revenue generated is a result of an increase in the volume of higher-priced items that were sold during the Diwali campaign. It indicates that the most sold category had higher margins with less aggressive promotional discounts, thus retaining more profit per unit. It could also indicate that the Diwali campaign attracted more premium customers.  
 
 ### Promo Type Performance
+![Promo Type Performance by Revenue](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/f4b1458d-6a1c-43f7-811b-42678ad79c19)
+
+![Promo Type Performance by Units Sold](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/ab0d8408-c6fa-479d-931f-62dffa4d3169)
+
 The **BOGOF** (Buy One Get One Free) promotion has led to the **highest incremental units sold**, indicating it is the most effective promotion type for driving volume sales, likely because customers perceive a higher value in getting an additional product for free, but this doesn't directly translate into higher revenue as seen in the "Promo Type Performance by Revenue" chart.
 
 However, **500 Cashback** generated the **most incremental revenue**, which suggests that while BOGOF moves more units, 500 Cashback excels in generating revenue. This is due to higher transaction values or a customer demographic that responds better to cashback incentives, it is attached to higher-priced items: most likely more premium or higher-margin products. 
@@ -140,6 +147,11 @@ However, **500 Cashback** generated the **most incremental revenue**, which sugg
 The **25% OFF**, **33% OFF**, and **50% OFF** promotions led to a **loss in revenue** post-promotion. The 25% OFF promotion led to a decrease in units sold, while the 33% OFF and 50% OFF promotions performed better than the 25% OFF in terms of units sold, but still significantly behind the BOGOF promotion.
 
 ### Category Performance
+![Ad Hoc Request No4 Category ISU percentage ranking](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/b851bab6-30e3-4fb5-8046-72bbceae13aa)
+Ad Hoc Request No4 - Category performance by ISU% ranking for Diwali campaign
+
+![Category Performance](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/6eff4097-430a-4a69-a498-2795c31f3616)
+
 During the **Diwali campaign: Combo1 category** had the **highest incremental units sold** and **incremental revenue generated**, with significant average increase in revenue and sold units. The Home Appliances category had considerable incremental units sold and the second-highest revenue increase. The **Personal Care category** saw a **loss in revenue** post-promotion, despite a respectable increase in sold units.
 
 For the **Sankranti Campaign: Grocery & Staples category** had **massive incremental units sold**, highest among all categories, with a significant Avg. ISU%. Despite seeing a loss in revenue in the Diwali campaign, it had substantial revenue growth during the Sankranti campaign, although the Avg. IR% is not as high as Combo1(which had considerable increase in revenue and units sold but not as massive as in the Diwali campaign), indicating a lower profit margin per unit or less expensive items. 
@@ -147,6 +159,14 @@ For the **Sankranti Campaign: Grocery & Staples category** had **massive increme
 The **Home Appliances category** had a **good performance** in both **incremental units and revenue** with high Avg. ISU% and Avg. IR%, which is consistent with its performance in the Diwali campaign. The **Personal Care category** once again had the **lowest incremental units sold** and **negative incremental revenue**, which is also consistent with its performance in the Diwali campaign.
 
 ### Product Performance
+![Ad Hoc Request No1 High Value Heavy Discount](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/79cc81ab-6e35-4813-999c-f5ea910378e8)
+Ad Hoc Request No1 - Heavily discounted high value products
+
+![Ad Hoc Request No5 Product IR ranking](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/f93e8961-4be2-4a03-9acb-8ea08ba3e810)
+Ad Hoc Request No5 - Top 5 products by IR% ranking
+
+![Product Performance](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/af175642-655f-479a-bc05-73ebe8d45d1d)
+
 Top products with **high performance** in terms of **incremental revenue** generated includes **Atliq_Home_Essential_8_Product_Combo** with Avg. base price 3,000 which did exceptionally well at an incremental revenue of 91million, **Atliq_waterproof_Immersion_Rod** with Avg. base price 1,020 at an incremental revenue of 5.4million, and **Atliq_Farm_Chakki_Atta (1KG)** with Avg. base price 330 and increase in revenue at 4.5million.
 
 In terms of **incremental sold units**, products like **Atliq_Farm_Chakki_Atta (1KG)**, **Atliq_Suflower_Oil (1L)**, and **Atliq_Home_Essential_8_Product_Combo** did exceedingly well.
@@ -158,6 +178,13 @@ Some products show negative incremental revenue, indicating that promotions wher
 **Atliq_waterproof_Immersion_Rod** and **Atliq_Double_Bedsheet_set** are **high-value products** (with base price well above 500) that were **heavily discounted** with **BOGOF** during the promotions and yielded significant **increment in revenue and volume sold**.
 
 ### Store and City Performance
+![Ad Hoc Request No2 Store count per city sql](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/9c815ad1-839d-4de9-b0be-f87f18fe0ef7)
+Ad Hoc Request No2 - Store count per city
+
+![City Performance by Revenue](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/a82f325d-f988-4a4b-8e50-3705a3053140)
+
+![Store Performance](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/2a10d97a-9e1a-40f2-b6a7-7ddbe5cc1b4b)
+
 **Bengaluru** has the **highest number of stores** at 10, suggesting it's a key market. **Chennai follows** with 8 stores, then Hyderabad with 7, indicating these are also significant markets. Cities like **Trivandrum** and **Vijayawada** have the **least number of stores**, which could point to either a smaller market size or less penetration by AtliQ Mart.
 
 **Bengaluru** tops the chart for **incremental revenue** generated and **incremental units sold**, with **Chennai** and **Hyderabad following**, which shows high efficiency and effectiveness of the promotions in increasing both revenue and volume in these cities. The store count seems to correlate with the performance metrics, suggesting that having more stores in a city can contribute to increased sold units and revenue increments. 
