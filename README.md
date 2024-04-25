@@ -77,7 +77,21 @@ Sales director Bruce Haryali wanted this immediately, but the analytics manager 
 **SQL Query** – [Data Combining]()
 
 **Data Exploration:** I familiarized myself with the problem statement and the dataset to better understand the structure and context of the data before cleaning the data and diving into my analysis. 
-**SQL Query** – [Data Exploration]()
+**SQL Query** – [Data Exploration]() 
+- **Column names and their datatypes** – The event_id column is the primary key
+- **Null values** – There are no null values in the promotions sales dataset.
+- **Duplicates** – I used the event_id column to check for duplicates. There are no duplicate entries in the dataset.
+- **Outliers** – Checking for any sales event not within the Diwali or Sankranti promotions period. Non where found.
+- **Campaign Duration** – The Sankranti and Diwali campaigns both lasted for 6 days each.
+- **Unique Promo Types** – There are 5 unique types of promotions applied during the campaign periods.
+- **Number of Stores in each City** – Bengaluru has the most stores and Vijayawada has the least stores.
+- **Scope of Data** - The dataset covers 1,500 promotional events across 50 stores in 10 cities, focusing on 15 different products belonging to 5 categories. 5 types of promotions were utilized during 2 major campaigns: Diwali and Sankranti.
+
+**Data Aggregation:** Still on SQL, I created a new table named **‘events_summarized_data’** with aggregated data from the events_combined_data table. The **‘events_summarized_data’** table includes additional columns calculating the following for each sales event: **incremental sold units, ISU%**(incremental sold unit percentage), **revenue before promo, revenue after promo, incremental revenue generated, and IR%**(incremental revenue generated percentage). 
+**SQL Query** – [Data Aggregation]() 
+
+
+
 
 
 
