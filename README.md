@@ -78,13 +78,35 @@ Sales director Bruce Haryali wanted this immediately, but the analytics manager 
 
 **Data Exploration:** I familiarized myself with the problem statement and the dataset to better understand the structure and context of the data before cleaning the data and diving into my analysis. 
 **SQL Query** – [Data Exploration]() 
+
 - **Column names and their datatypes** – The event_id column is the primary key
+
+![columns and data types](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/c30c4ad9-5f42-4722-a5bb-31aba98555fe)
+
 - **Null values** – There are no null values in the promotions sales dataset.
+
+![checking for Null](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/232129da-daca-412e-9938-b4748f905192)
+
 - **Duplicates** – I used the event_id column to check for duplicates. There are no duplicate entries in the dataset.
+
+![duplicates result](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/3d6fdb9a-6ac6-412e-bf5b-ddc90228db25)
+
 - **Outliers** – Checking for any sales event not within the Diwali or Sankranti promotions period. Non where found.
+
+![outliers-sales outside campaign period](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/5e765945-11ea-400f-a75b-e8b3d95e1270)
+
 - **Campaign Duration** – The Sankranti and Diwali campaigns both lasted for 6 days each.
+
+![campaign duration](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/40a04222-ecd3-4681-b8f8-ce40abac47df)
+
 - **Unique Promo Types** – There are 5 unique types of promotions applied during the campaign periods.
+
+![unique promo types](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/b491bd9c-5742-4e87-90fd-ce32a57f391c)
+
 - **Number of Stores in each City** – Bengaluru has the most stores and Vijayawada has the least stores.
+
+![Ad Hoc Request No2 Store count per city sql](https://github.com/BridgetOEze/Codebasics-AtliQ-Mart-Promotions-Analysis/assets/168002582/10a7bf41-4aab-41df-a816-2ab7e34272d5)
+
 - **Scope of Data** - The dataset covers 1,500 promotional events across 50 stores in 10 cities, focusing on 15 different products belonging to 5 categories. 5 types of promotions were utilized during 2 major campaigns: Diwali and Sankranti.
 
 **Data Aggregation:** Still on SQL, I created a new table named **‘events_summarized_data’** with aggregated data from the events_combined_data table. The **‘events_summarized_data’** table includes additional columns calculating the following for each sales event: **incremental sold units, ISU%**(incremental sold unit percentage), **revenue before promo, revenue after promo, incremental revenue generated, and IR%**(incremental revenue generated percentage). 
