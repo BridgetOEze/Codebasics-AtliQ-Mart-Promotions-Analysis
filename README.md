@@ -119,7 +119,7 @@ The summarized data is appropriately stored in the **retail_events_db** database
 
 **SQL Query** –  [Ad Hoc Requests](/07_Ad_Hoc_Requests.sql)
 
-**Tableau** – [Data Visualization]()
+**Tableau Dashboard** – [Data Visualization](https://public.tableau.com/app/profile/bridget.eze/viz/AtliQMartPromotionsProject/AtliQMartPromotionsProject)
 
 Analysis question: What is the effectiveness of the sales promotions conducted during the Diwali and Sankranti campaigns? 
 
