@@ -12,6 +12,7 @@ SELECT
 FROM events_summary_data
 GROUP BY promo_type
 
+	
 -- COMMAND --
 -- Promotion type performance ranking based on incremental sold units
 SELECT
@@ -22,6 +23,7 @@ SELECT
 FROM events_summary_data
 GROUP BY promo_type
 
+	
 -- COMMAND --
 -- Determining if there's a significant difference in the performance of discount-based promotions versus "Buy One Get One Free" (BOGOF) or cashback promotions
 SELECT 
@@ -45,6 +47,7 @@ FROM events_summary_data
 GROUP BY campaign_name
 ORDER BY total_incremental_revenue DESC
 
+	
 -- COMMAND --
 -- Total units sold before and after the promotions for each campaign, and the total incremental units sold
 -- where QSBP = 'quantity sold before promo' and QSAP - 'quantity sold after promo'
