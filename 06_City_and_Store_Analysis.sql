@@ -1,5 +1,6 @@
 -- Store and City Analysis
 
+
 -- Store Performance Analysis
 -- COMMAND --
 -- Top 10 stores in terms of incremental revenue generated
@@ -13,6 +14,7 @@ GROUP BY store_id
 ORDER BY total_incremental_revenue DESC
 LIMIT 10                                                                          
 
+	
 -- COMMAND --
 -- Top 10 stores in terms of incremental sold units
 SELECT 
@@ -25,6 +27,7 @@ GROUP BY store_id
 ORDER BY total_incremental_units DESC
 LIMIT 10
 
+	
 -- COMMAND --
 -- High performance stores common in the top 10 lists for incremental revenue generated and incremental sold units, and their locations (cities).
 WITH 
@@ -64,6 +67,7 @@ JOIN events_summary_data AS esd ON ts.store_id = esd.store_id
 GROUP BY ts.store_id, esd.city, rts.total_incremental_revenue, uts.total_incremental_units
 ORDER BY rts.total_incremental_revenue DESC, uts.total_incremental_units DESC
 
+	
 -- COMMAND --
 -- Bottom 10 stores in terms of incremental revenue generated
 SELECT 
@@ -76,6 +80,7 @@ GROUP BY store_id
 ORDER BY total_incremental_revenue ASC
 LIMIT 10    
 
+	
 -- COMMAND --
 -- Bottom 10 stores in terms of incremental sold units
 SELECT 
@@ -88,6 +93,7 @@ GROUP BY store_id
 ORDER BY total_incremental_units ASC
 LIMIT 10
 
+	
 -- COMMAND --
 -- Low performance stores common in the bottom 10 lists for incremental revenue generated and incremental sold units, and their locations (cities).
 WITH 
@@ -138,6 +144,7 @@ FROM events_summary_data
 GROUP BY city
 ORDER BY store_count DESC
 
+	
 -- COMMAND --
 -- Average performance by city ranked based on incremental revenue generated and incremental sold units
 SELECT 
@@ -149,6 +156,7 @@ SELECT
 FROM events_summary_data
 GROUP BY city
 
+	
 -- COMMAND --
 -- Identifying cities with the top performing stores
 -- (to spot common location characteristics among top-performing stores and how these could be leveraged across other stores)
@@ -171,6 +179,7 @@ JOIN events_summary_data AS esd ON ts.store_id = esd.store_id
 GROUP BY ts.store_id, esd.city
 ORDER BY avg_incremental_revenue DESC, avg_incremental_units DESC
 
+	
 -- COMMAND --
 -- Identifying cities with bottom-performing stores to pinpoint how they can leverage the common characteristics among top-performing stores 
 WITH 
