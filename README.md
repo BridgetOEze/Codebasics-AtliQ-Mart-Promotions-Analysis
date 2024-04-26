@@ -74,10 +74,10 @@ Sales director Bruce Haryali wanted this immediately, but the analytics manager 
 **Tools Used: SQL** – to combine, check for errors, aggregate, and manipulate the data. **Tableau** – to analyze and visualize the data and create a dashboard. 
 
 **Combining The Data:** I imported the **retail_events_db** database into **MySQL Workbench**. This database contains 4 tables: **dim_campaigns** – the campaigns table, **dim_products** – the products table, **dim_stores** – the stores table, and **fact_events** – the table for all the sales events during the promotions. I combined the data from all 4 tables into a new table I created named **‘events_combined_data’**. 
-**SQL Query** – [Data Combining]()
+**SQL Query** – [Data Combining](/01_Events_Data_Combination.sql)
 
 **Data Exploration:** I familiarized myself with the problem statement and the dataset to better understand the structure and context of the data before cleaning the data and diving into my analysis. 
-**SQL Query** – [Data Exploration]() 
+**SQL Query** – [Data Exploration](/02_Events_Data_Exploration.sql)
 
 - **Column names and their datatypes** – The event_id column is the primary key
 
@@ -106,18 +106,18 @@ Sales director Bruce Haryali wanted this immediately, but the analytics manager 
 - **Scope of Data** - The dataset covers 1,500 promotional events across 50 stores in 10 cities, focusing on 15 different products belonging to 5 categories. 5 types of promotions were utilized during 2 major campaigns: Diwali and Sankranti.
 
 **Data Aggregation:** Still on SQL, I created a new table named **‘events_summarized_data’** with aggregated data from the events_combined_data table. The **‘events_summarized_data’** table includes additional columns calculating the following for each sales event: **incremental sold units, ISU%**(incremental sold unit percentage), **revenue before promo, revenue after promo, incremental revenue generated, and IR%**(incremental revenue generated percentage). 
-**SQL Query** – [Data Aggregation]() 
+**SQL Query** – [Data Aggregation](/03_Events_Data_Aggregation.sql) 
 
 ## Analyze and Share
 The summarized data is appropriately stored in the **retail_events_db** database and is now ready for analysis. For the analysis, I used multiple relevant queries on the **events_summarized_data** table and visualized them in Tableau.
 
-**SQL Query** –  [Campaign and Promo Type Analysis]() 
+**SQL Query** –  [Campaign and Promo Type Analysis](/04_Campaign_and_Promo_Type_Analysis.sql) 
 
-**SQL Query** –  [Category and Product Analysis]() 
+**SQL Query** –  [Category and Product Analysis](/05_Category_and_Product_Analysis.sql) 
 
-**SQL Query** –  [City and Store Analysis]() 
+**SQL Query** –  [City and Store Analysis](/06_City_and_Store_Analysis.sql) 
 
-**SQL Query** –  [Ad Hoc Requests]()
+**SQL Query** –  [Ad Hoc Requests](/07_Ad_Hoc_Requests.sql)
 
 **Tableau** – [Data Visualization]()
 
