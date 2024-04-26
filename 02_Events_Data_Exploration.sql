@@ -1,10 +1,12 @@
 -- Data Exploration
 
+
 -- COMMAND --
 -- column names and their data types
 SHOW COLUMNS
 FROM events_combined_data
 
+	
 -- COMMAND --
 -- checking for NULL values in all columns
 SELECT 
@@ -23,12 +25,14 @@ SELECT
     COUNT(*) - COUNT(quantity_sold_after_promo) AS quantity_sold_after_promo
 FROM events_combined_data
 
+	
 -- COMMAND --
 -- checking for Duplicates
 SELECT 
 	COUNT(event_id) - COUNT(DISTINCT(event_id)) AS num_duplicate_rows
 FROM events_combined_data                                                                             -- there are no Duplicates
 
+	
 -- COMMAND --
 -- checking for outliers - any sales not within the campaign periods
 SELECT *
@@ -37,7 +41,8 @@ WHERE
     (campaign_name = 'Diwali' AND (start_date NOT BETWEEN '2023-11-12' AND '2023-11-18' OR end_date NOT BETWEEN '2023-11-12' AND '2023-11-18'))
     OR 
     (campaign_name = 'Sankranti' AND (start_date NOT BETWEEN '2024-01-10' AND '2024-01-16' OR end_date NOT BETWEEN '2024-01-10' AND '2024-01-16'))
-    
+
+	
 -- COMMAND --
 -- promo_type - the 5 unique types of promotions applied
 SELECT 
@@ -46,6 +51,7 @@ FROM events_combined_data
 GROUP BY promo_type
 ORDER BY no_of_promo_type DESC
 
+	
 -- COMMAND --
 -- campaign duration
 SELECT 
@@ -54,6 +60,7 @@ SELECT
     end_date - start_date AS campaign_duration
 FROM events_combined_data
 
+	
 -- COMMAND --
 -- number of stores in each city
 SELECT 
