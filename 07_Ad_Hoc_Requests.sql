@@ -1,5 +1,6 @@
 -- Addressing Specified Business Questions 
 
+
 -- COMMAND --
 -- No.1
 -- Identify hihg-value products that are currently being heavily discounted
@@ -12,6 +13,7 @@ SELECT
 FROM events_summary_data
 WHERE base_price > 500 AND promo_type = 'BOGOF'
 
+	
 -- COMMAND --
 -- No.2
 -- Identify the cities with the highest store presence
@@ -23,6 +25,7 @@ FROM events_summary_data
 GROUP BY city
 ORDER BY store_count DESC
 
+	
 -- COMMAND --
 -- No.3
 -- Evaluating the financial impact of the promotional campaigns
@@ -36,6 +39,7 @@ FROM events_summary_data
 GROUP BY campaign_name
 ORDER BY total_incremental_revenue DESC
 
+	
 -- COMMAND --
 -- No.4
 -- Assessing the category-wise success and impact of the Diwali campaign on incremental sales
@@ -50,6 +54,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Diwali'
 GROUP BY category
 
+	
 -- COMMAND --
 -- No.5
 -- Identify the most successful products in terms of incremental revenue across both campaigns
