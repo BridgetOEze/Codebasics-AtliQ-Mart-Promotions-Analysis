@@ -1,5 +1,6 @@
 -- Product and Category Analysis
 
+
 -- Product Performance Analysis
 -- COMMAND --
 -- Top 5 products in terms of incremental revenue generated
@@ -16,6 +17,7 @@ GROUP BY product_code, product_name, category, promo_type
 ORDER BY total_incremental_revenue DESC
 LIMIT 5                                              
 
+	
 -- COMMAND --
 -- Top 5 products in terms of incremental revenue percentage (IRU%) ranking
 SELECT 
@@ -37,6 +39,7 @@ FROM events_summary_data
 GROUP BY product_name, base_price, category, promo_type  
 LIMIT 5                                              
 
+	
 -- COMMAND --
 -- Top 5 products in terms of incremental sold units
 SELECT 
@@ -52,6 +55,7 @@ GROUP BY product_code, product_name, category, promo_type
 ORDER BY total_incremental_units DESC
 LIMIT 5
 
+	
 -- COMMAND --
 -- Top 5 products in terms of incremental sold units percentage (ISU%) ranking
 SELECT 
@@ -73,6 +77,7 @@ FROM events_summary_data
 GROUP BY product_code, product_name, category, promo_type
 LIMIT 5
 
+	
 -- COMMAND --
 -- Top products with high performance in both incremental revenue generated and incremental sold units
 WITH 
@@ -113,6 +118,7 @@ JOIN events_summary_data AS esd ON tp.product_code = esd.product_code
 GROUP BY tp.product_code, esd.product_name, esd.category, rtp.total_incremental_revenue, utp.total_incremental_units
 ORDER BY rtp.total_incremental_revenue DESC, utp.total_incremental_units DESC
 
+	
 -- COMMAND --
 -- Bottom 5 products in terms of incremental revenue generated
 SELECT 
@@ -128,6 +134,7 @@ GROUP BY product_code, product_name, category, promo_type
 ORDER BY total_incremental_revenue ASC
 LIMIT 5                 
 
+	
 -- COMMAND --
 -- Bottom 5 products in terms of incremental revenue percentage (IRU%) 
 SELECT 
@@ -146,6 +153,7 @@ GROUP BY product_code, product_name, category, promo_type
 ORDER BY 'avg_IR%' 
 LIMIT 5                                       
 
+	
 -- COMMAND --
 -- Bottom 5 products in terms of incremental sold units
 SELECT 
@@ -161,6 +169,7 @@ GROUP BY product_code, product_name, category, promo_type
 ORDER BY total_incremental_units
 LIMIT 5
 
+	
 -- COMMAND --
 -- Bottom 5 products in terms of incremental sold units percentage (ISU%) 
 SELECT 
@@ -179,6 +188,7 @@ GROUP BY product_code, product_name, category, promo_type
 ORDER BY 'avg_ISU%'
 LIMIT 5
 
+	
 -- COMMAND --
 -- Products with low performance in both incremental revenue generated and incremental sold units
 WITH 
@@ -219,6 +229,7 @@ JOIN events_summary_data AS esd ON tp.product_code = esd.product_code
 GROUP BY tp.product_code, esd.product_name, esd.category, rtp.total_incremental_revenue, utp.total_incremental_units
 ORDER BY rtp.total_incremental_revenue ASC, utp.total_incremental_units ASC
 
+	
 -- COMMAND --
 -- Identifying high-value products with heavy discounts
 -- List of products with a base price greater than 500 and are featured in promo type of BOGOF(Buy One Get One Free)
@@ -230,6 +241,7 @@ SELECT
 FROM events_summary_data
 WHERE base_price > 500 AND promo_type = 'BOGOF'
 
+	
 -- COMMAND --
 -- Total number of products sold before and after the promotions, and the totals of the key performance indicators (KPIs)
 -- where QSBP = 'quantity sold before promo' and QSAP - 'quantity sold after promo'
@@ -254,6 +266,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Diwali'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental revenue percentage (IR%) during the Diwali campaign
 SELECT 
@@ -266,6 +279,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Diwali'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental sold units during the Diwali campaign
 SELECT 
@@ -276,6 +290,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Diwali'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental sold unit percentage (ISU%) during the Diwali campaign
 SELECT 
@@ -288,6 +303,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Diwali'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental revenue generated during the Sankranti campaign
 SELECT 
@@ -298,6 +314,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Sankranti'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental revenue percentage (IR%) during the Sankranti campaign
 SELECT 
@@ -310,6 +327,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Sankranti'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental sold units during the Sankranti campaign
 SELECT 
@@ -320,6 +338,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Sankranti'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental sold unit percentage (ISU%) during the Sankranti campaign
 SELECT 
@@ -332,6 +351,7 @@ FROM events_summary_data
 WHERE campaign_name = 'Sankranti'
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental revenue generated during the entire campaign period
 SELECT 
@@ -341,6 +361,7 @@ SELECT
 FROM events_summary_data
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental revenue percentage (IR%) during the entire campaign period
 SELECT 
@@ -352,6 +373,7 @@ SELECT
 FROM events_summary_data
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental sold units during the entire campaign period
 SELECT 
@@ -361,6 +383,7 @@ SELECT
 FROM events_summary_data
 GROUP BY category
 
+	
 -- COMMAND --
 -- Category performance based on incremental sold unit percentage (ISU%) during the entire campaign period
 SELECT 
@@ -372,6 +395,7 @@ SELECT
 FROM events_summary_data
 GROUP BY category
 
+	
 -- COMMAND --
 -- Assessing the correlation between product category and promotion type effectiveness
 SELECT 
