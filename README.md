@@ -5,7 +5,7 @@ Hey there! Welcome to my very first data analytics project. As someone who's jus
 
 ## Introduction
 In this project, we're looking into a major sales event at AtliQ Mart. The store is keen to identify which deals were hits and which missed the mark during their last promotions. This insight is crucial for planning more effective sales strategies in the future. The mission is to deep dive into the sales data, extract valuable insights, and present these findings in a way that's easy to understand. This will help AtliQ Mart make informed decisions on what sales promotions to run moving forward. 
-I’ll be stepping into Peter Pandey's shoes: a data analyst at AtliQ Mart who has been tasked with this challenge. Using the following data analysis process: [Ask](#ask), [Prepare](#prepare), [Process](#process), [Analyze](#analyze-and-share), [Share](#analyze-and-share), and [Act](#act), I performed real-life data analyst tasks to reach the following conclusions that:
+I’ll be stepping into Peter Pandey's shoes: a data analyst at AtliQ Mart who has been tasked with this challenge. Using the following **Google Data Analytics** data analysis process: [Ask](#ask), [Prepare](#prepare), [Process](#process), [Analyze](#analyze-and-share), [Share](#analyze-and-share), and [Act](#act), I performed real-life data analyst tasks to reach the following conclusions that:
 -	For sales Impact, the promotional events significantly increased the quantity of products sold from about 139 units to 290 units on average per event. This highlights the effectiveness of these promotions in driving higher product sales.
 -	For revenue Impact, the promotions had a positive effect on revenue as well. On average, revenue increased by approximately $71,522 per event after the promotion, despite some promotions leading to a loss in revenue, there was an overall increase in revenue generated.
 -	For performance variation, the dataset shows a wide range of outcomes with some promotions more successful than others, which emphasizes on the importance of tailoring promotional strategies to specific products, stores, and market conditions to maximize their effectiveness.
@@ -116,6 +116,8 @@ The summarized data is appropriately stored in the **retail_events_db** database
 **SQL Query** –  [Category and Product Analysis]() 
 
 **SQL Query** –  [City and Store Analysis]() 
+
+**SQL Query** –  [Ad Hoc Requests]()
 
 **Tableau** – [Data Visualization]()
 
