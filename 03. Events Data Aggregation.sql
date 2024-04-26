@@ -13,6 +13,7 @@
 	-- "BOGOF" means two items are sold for the price of one, effectively making it 50% off if exactly two are bought, the item is sold at the base price * (quantity_sold_after_promo/2)
 	-- "500 Cashback" means the item sold at the (base price - 500) * quantity_sold_after_promo
 
+
 CREATE TABLE events_summary_data AS (
 SELECT
 	event_id,
