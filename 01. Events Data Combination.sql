@@ -2,6 +2,7 @@
 
 -- Combining the data from all 4 tables (fact_events, dim_stores, _dim_products, and dim_campaigns) into a single table 'events_combined_data'
 
+
 CREATE TABLE events_combined_data AS (
 SELECT
 	event_id,
